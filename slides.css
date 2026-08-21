@@ -797,6 +797,8 @@ html, body {
 /* figures recolored for dark background — no plate needed */
 .fig-dark { display: block; width: 100%; height: auto; }
 .fig-reward { width: 96%; margin: 0 auto; }
+.fig-teaser { width: 92%; margin: 0 auto; }
+.fig-teaser-sm { width: 66%; margin: 0 auto; }
 
 /* setup slide: give the task-suite figure the larger share */
 .cols-setup { gap: 40px; align-items: center; }
@@ -810,7 +812,7 @@ html, body {
   position: absolute;
   top: 32%;
   height: 65.2%;
-  background: rgba(0, 0, 0, 0.74);
+  background: rgba(0, 0, 0, 0.56);
   border-radius: 4px;
   opacity: 0;
   transition: opacity 0.7s ease 0.5s;
@@ -844,22 +846,22 @@ html, body {
 }
 
 /* closing slide: QR trio + compact title block */
-.wordmark-sm { font-size: 72px; margin-bottom: 10px; }
-.deck-line-sm { font-size: 23px; margin-bottom: 16px; }
-.authors-sm { font-size: 15px; line-height: 1.6; margin-bottom: 22px; }
-.qr-row { display: flex; justify-content: center; gap: 52px; margin: 4px 0 26px; }
+.wordmark-sm { font-size: 96px; margin-bottom: 12px; }
+.deck-line-sm { font-size: 26px; margin-bottom: 20px; }
+.authors-sm { font-size: 17px; line-height: 1.6; margin-bottom: 26px; }
+.qr-row { display: flex; justify-content: center; gap: 68px; margin: 4px 0 0; }
 .qr { margin: 0; }
 .qr img {
   display: block;
-  width: 128px;
-  height: 128px;
-  border-radius: 10px;
+  width: 172px;
+  height: 172px;
+  border-radius: 12px;
   border: 1px solid var(--border);
 }
 .qr figcaption {
-  margin-top: 9px;
+  margin-top: 12px;
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.08em;
   color: var(--text-dim);
   text-align: center;

@@ -26,7 +26,7 @@
 <g id="pattern_tile_9">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_9" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -39,7 +39,7 @@
 <g id="pattern_tile_11">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_11" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -52,7 +52,7 @@
 <g id="pattern_tile_13">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_13" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -65,7 +65,7 @@
 <g id="pattern_tile_15">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_15" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -78,7 +78,7 @@
 <g id="pattern_tile_17">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_17" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -91,7 +91,7 @@
 <g id="pattern_tile_19">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_19" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -104,7 +104,7 @@
 <g id="pattern_tile_21">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#5b9dff"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#5b9dff"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#1e3a8a" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_21" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -117,7 +117,7 @@
 <g id="pattern_tile_23">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#5b9dff"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#5b9dff"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#1e3a8a" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_23" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -130,7 +130,7 @@
 <g id="pattern_tile_25">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#a78bfa"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#a78bfa"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4c1d95" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_25" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -143,7 +143,7 @@
 <g id="pattern_tile_27">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#a78bfa"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#a78bfa"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4c1d95" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_27" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -300,7 +300,7 @@
 <g id="pattern_tile_77">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_77" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -313,7 +313,7 @@
 <g id="pattern_tile_79">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_79" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -326,7 +326,7 @@
 <g id="pattern_tile_81">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_81" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -339,7 +339,7 @@
 <g id="pattern_tile_83">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_83" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -352,7 +352,7 @@
 <g id="pattern_tile_85">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_85" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -365,7 +365,7 @@
 <g id="pattern_tile_87">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_87" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -378,7 +378,7 @@
 <g id="pattern_tile_89">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#5b9dff"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#5b9dff"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#1e3a8a" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_89" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -391,7 +391,7 @@
 <g id="pattern_tile_91">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#5b9dff"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#5b9dff"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#1e3a8a" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_91" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -404,7 +404,7 @@
 <g id="pattern_tile_93">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#a78bfa"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#a78bfa"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4c1d95" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_93" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -417,7 +417,7 @@
 <g id="pattern_tile_95">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#a78bfa"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#a78bfa"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4c1d95" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_95" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -583,7 +583,7 @@
 <g id="pattern_tile_148">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_148" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -602,7 +602,7 @@
 <g id="pattern_tile_152">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#5b9dff"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#5b9dff"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#1e3a8a" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_152" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -615,7 +615,7 @@
 <g id="pattern_tile_154">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#5b9dff"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#5b9dff"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#1e3a8a" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_154" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -628,7 +628,7 @@
 <g id="pattern_tile_156">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#a78bfa"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#a78bfa"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4c1d95" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <pattern id="pattern_156" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -641,7 +641,7 @@
 <g id="pattern_tile_158">
 <path transform="matrix(1,0,0,-1,0,0)" d="M0 0H72V72H0Z" fill="#a78bfa"/>
 <path transform="matrix(1,0,0,-1,0,0)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#a78bfa"/>
-<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4c1d95" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,0,0)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <pattern id="pattern_158" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
 <g transform="matrix(1,0,0,-1,-0,0)">
@@ -814,31 +814,31 @@
 <path transform="matrix(1,0,0,-1,0,417.544)" d="M0 0H1588.7894V417.544H0Z" fill="none"/>
 <path transform="matrix(1,0,0,-1,0,417.544)" d="M77.50938 14.4H539.5094V277.488H77.50938Z" fill="none"/>
 <g clip-path="url(#clip_1)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M77.50938 32.0965H539.5094"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M77.50938 32.0965H539.5094"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,62.571878,392.66627)" d="M240 364C240 381 245 395 257 407 269 419 283 425 301 425 318 425 332 419 344 407 356 395 362 381 362 364 362 346 356 332 344 320 332 308 318 303 301 303 283 303 269 308 257 320 245 332 240 346 240 364M301 620C267 620 243 599 228 559 212 518 205 453 205 364 205 274 212 209 228 169 243 128 267 108 301 108 334 108 358 128 374 169 389 209 397 274 397 364 397 453 389 518 374 559 358 599 334 620 301 620M60 364C60 490 80 584 120 647 160 710 220 742 301 742 381 742 442 710 482 648 522 585 542 490 542 364 542 237 522 142 482 80 442 18 381-13 301-13 220-13 160 18 120 81 80 143 60 238 60 364"/>
 <g clip-path="url(#clip_2)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M77.50938 79.28718H539.5094"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M77.50938 79.28718H539.5094"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,51.134378,345.4756)" d="M212 127H519V0H56V123L134 206C226 304 283 365 303 388 327 416 345 440 356 462 366 484 372 505 372 527 372 559 362 584 342 602 322 620 295 629 259 629 233 629 204 623 172 613 140 603 106 588 72 569V703C106 715 140 725 174 732 207 738 239 742 270 742 347 742 408 724 452 688 496 652 518 603 518 541 518 512 513 485 503 460 493 435 477 407 454 377 436 355 389 305 312 228 270 186 236 152 212 127"/>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,62.572378,345.4756)" d="M240 364C240 381 245 395 257 407 269 419 283 425 301 425 318 425 332 419 344 407 356 395 362 381 362 364 362 346 356 332 344 320 332 308 318 303 301 303 283 303 269 308 257 320 245 332 240 346 240 364M301 620C267 620 243 599 228 559 212 518 205 453 205 364 205 274 212 209 228 169 243 128 267 108 301 108 334 108 358 128 374 169 389 209 397 274 397 364 397 453 389 518 374 559 358 599 334 620 301 620M60 364C60 490 80 584 120 647 160 710 220 742 301 742 381 742 442 710 482 648 522 585 542 490 542 364 542 237 522 142 482 80 442 18 381-13 301-13 220-13 160 18 120 81 80 143 60 238 60 364"/>
 <g clip-path="url(#clip_3)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M77.50938 126.477848H539.5094"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M77.50938 126.477848H539.5094"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,51.134378,298.2849)" d="M339 569 155 281H339V569M326 729H477V281H557V157H477V0H339V157H50V297L326 729"/>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,62.572378,298.2849)" d="M240 364C240 381 245 395 257 407 269 419 283 425 301 425 318 425 332 419 344 407 356 395 362 381 362 364 362 346 356 332 344 320 332 308 318 303 301 303 283 303 269 308 257 320 245 332 240 346 240 364M301 620C267 620 243 599 228 559 212 518 205 453 205 364 205 274 212 209 228 169 243 128 267 108 301 108 334 108 358 128 374 169 389 209 397 274 397 364 397 453 389 518 374 559 358 599 334 620 301 620M60 364C60 490 80 584 120 647 160 710 220 742 301 742 381 742 442 710 482 648 522 585 542 490 542 364 542 237 522 142 482 80 442 18 381-13 301-13 220-13 160 18 120 81 80 143 60 238 60 364"/>
 <g clip-path="url(#clip_4)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M77.50938 173.66852H539.5094"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M77.50938 173.66852H539.5094"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,51.134378,251.09424)" d="M314 365C282 365 258 353 242 331 226 308 218 275 218 233 218 190 226 157 242 135 258 112 282 101 314 101 345 101 369 112 386 135 402 157 411 190 411 233 411 275 402 308 386 331 369 353 345 365 314 365M503 712V581C477 595 452 606 429 614 405 621 383 625 361 625 309 625 269 607 242 572 214 537 200 485 199 417 214 438 233 454 257 465 281 475 309 481 342 481 407 481 458 460 494 418 530 376 548 318 548 242 548 160 527 97 487 53 447 8 390-14 318-14 229-14 164 15 124 75 84 134 64 230 64 363 64 489 88 583 137 646 186 709 260 741 359 741 381 741 405 738 429 734 453 729 478 722 503 712"/>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,62.572378,251.09424)" d="M240 364C240 381 245 395 257 407 269 419 283 425 301 425 318 425 332 419 344 407 356 395 362 381 362 364 362 346 356 332 344 320 332 308 318 303 301 303 283 303 269 308 257 320 245 332 240 346 240 364M301 620C267 620 243 599 228 559 212 518 205 453 205 364 205 274 212 209 228 169 243 128 267 108 301 108 334 108 358 128 374 169 389 209 397 274 397 364 397 453 389 518 374 559 358 599 334 620 301 620M60 364C60 490 80 584 120 647 160 710 220 742 301 742 381 742 442 710 482 648 522 585 542 490 542 364 542 237 522 142 482 80 442 18 381-13 301-13 220-13 160 18 120 81 80 143 60 238 60 364"/>
 <g clip-path="url(#clip_5)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M77.50938 220.85919H539.5094"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M77.50938 220.85919H539.5094"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,51.134378,203.90357)" d="M301 325C268 325 242 314 222 294 202 274 193 247 193 214 193 180 202 153 222 133 242 112 268 102 301 102 333 102 359 112 379 133 399 154 409 181 409 214 409 247 399 274 379 294 359 314 333 325 301 325M194 386C157 398 129 418 110 446 90 473 81 506 81 546 81 606 100 654 140 689 179 724 233 742 301 742 369 742 422 724 462 689 501 654 521 606 521 546 521 506 511 473 492 446 473 419 446 399 410 386 450 374 482 352 505 320 527 288 539 249 539 205 539 135 518 81 477 43 435 5 377-13 301-13 225-13 166 5 125 43 83 81 63 135 63 205 63 249 74 288 97 320 120 352 152 374 194 386M209 534C209 505 217 482 233 466 249 449 272 441 301 441 329 441 352 449 368 466 384 482 393 505 393 534 393 562 384 585 368 601 352 617 329 626 301 626 273 626 250 617 234 601 217 584 209 562 209 534"/>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,62.572378,203.90357)" d="M240 364C240 381 245 395 257 407 269 419 283 425 301 425 318 425 332 419 344 407 356 395 362 381 362 364 362 346 356 332 344 320 332 308 318 303 301 303 283 303 269 308 257 320 245 332 240 346 240 364M301 620C267 620 243 599 228 559 212 518 205 453 205 364 205 274 212 209 228 169 243 128 267 108 301 108 334 108 358 128 374 169 389 209 397 274 397 364 397 453 389 518 374 559 358 599 334 620 301 620M60 364C60 490 80 584 120 647 160 710 220 742 301 742 381 742 442 710 482 648 522 585 542 490 542 364 542 237 522 142 482 80 442 18 381-13 301-13 220-13 160 18 120 81 80 143 60 238 60 364"/>
 <g clip-path="url(#clip_6)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M77.50938 268.04988H539.5094"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M77.50938 268.04988H539.5094"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,39.696878,156.71289)" d="M92 127H253V600L103 563V693L254 729H393V127H554V0H92V127"/>
 <path fill="#dfe7f3" transform="matrix(.019000002,0,0,-.019000002,51.134878,156.71289)" d="M240 364C240 381 245 395 257 407 269 419 283 425 301 425 318 425 332 419 344 407 356 395 362 381 362 364 362 346 356 332 344 320 332 308 318 303 301 303 283 303 269 308 257 320 245 332 240 346 240 364M301 620C267 620 243 599 228 559 212 518 205 453 205 364 205 274 212 209 228 169 243 128 267 108 301 108 334 108 358 128 374 169 389 209 397 274 397 364 397 453 389 518 374 559 358 599 334 620 301 620M60 364C60 490 80 584 120 647 160 710 220 742 301 742 381 742 442 710 482 648 522 585 542 490 542 364 542 237 522 142 482 80 442 18 381-13 301-13 220-13 160 18 120 81 80 143 60 238 60 364"/>
@@ -1102,16 +1102,16 @@
 <path fill="#dfe7f3" transform="matrix(.023000002,0,0,-.023000002,370.82884,110.056)" d="M392 282C392 330 382 369 364 399 345 429 321 444 291 444 261 444 236 429 218 400 200 370 191 331 191 282 191 232 200 193 218 164 236 134 261 120 291 120 321 120 345 134 364 164 382 193 392 232 392 282M535 41C535-45 515-108 476-147 436-186 372-206 283-206 253-206 223-203 194-199 164-195 135-188 105-179V-48C132-62 159-73 187-81 215-88 244-92 274-92 314-92 343-82 363-63 382-44 392-15 392 25V84C378 58 359 38 336 26 313 13 285 7 252 7 189 7 139 31 103 80 66 128 48 195 48 279 48 365 66 434 103 485 139 535 189 561 251 561 282 561 310 553 334 539 358 524 378 503 392 477V547H535V41"/>
 <path transform="matrix(1,0,0,-1,0,417.544)" d="M594.9494 14.4H1056.9494V277.488H594.9494Z" fill="none"/>
 <g clip-path="url(#clip_73)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M594.9494 32.0965H1056.9494"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M594.9494 32.0965H1056.9494"/>
 </g>
 <g clip-path="url(#clip_74)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M594.9494 79.28718H1056.9494"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M594.9494 79.28718H1056.9494"/>
 </g>
 <g clip-path="url(#clip_75)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M594.9494 126.477848H1056.9494"/>
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M594.9494 173.66852H1056.9494"/>
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M594.9494 220.85919H1056.9494"/>
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M594.9494 268.04988H1056.9494"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M594.9494 126.477848H1056.9494"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M594.9494 173.66852H1056.9494"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M594.9494 220.85919H1056.9494"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M594.9494 268.04988H1056.9494"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M613.23666 17.838135H637.8111V144.07318H613.23666Z" fill-opacity=".25"/>
 <path transform="matrix(1,0,0,-1,0,417.544)" d="M607.23666 23.838135H631.8111V150.07318H607.23666Z" fill="#fb7185"/>
@@ -1358,16 +1358,16 @@
 <path fill="#dfe7f3" transform="matrix(.023000002,0,0,-.023000002,902.1171,110.056)" d="M523 355V0H381V333C381 373 375 401 364 418 352 435 334 444 309 444 283 444 263 432 248 409 233 386 226 354 226 313V0H84V547H226V465C236 495 253 518 277 535 301 551 331 560 366 560 418 560 457 542 483 508 509 474 523 423 523 355"/>
 <path transform="matrix(1,0,0,-1,0,417.544)" d="M1112.3894 14.4H1574.3894V277.488H1112.3894Z" fill="none"/>
 <g clip-path="url(#clip_141)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M1112.3894 32.0965H1574.3894"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M1112.3894 32.0965H1574.3894"/>
 </g>
 <g clip-path="url(#clip_142)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M1112.3894 79.28718H1574.3894"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M1112.3894 79.28718H1574.3894"/>
 </g>
 <g clip-path="url(#clip_143)">
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M1112.3894 126.477848H1574.3894"/>
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M1112.3894 173.66852H1574.3894"/>
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M1112.3894 220.85919H1574.3894"/>
-<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#2e3c55" d="M1112.3894 268.04988H1574.3894"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M1112.3894 126.477848H1574.3894"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M1112.3894 173.66852H1574.3894"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M1112.3894 220.85919H1574.3894"/>
+<path transform="matrix(1,0,0,-1,0,417.544)" stroke-width=".5" stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#44557c" d="M1112.3894 268.04988H1574.3894"/>
 </g>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M1130.6766 17.838135H1155.2511V37.89417H1130.6766Z" fill-opacity=".25"/>
 <path transform="matrix(1,0,0,-1,0,417.544)" d="M1124.6766 23.838135H1149.2511V43.89417H1124.6766Z" fill="#fb7185"/>
@@ -1376,17 +1376,17 @@
 <g clip-path="url(#clip_144)">
 <path transform="matrix(1,0,0,-1,1080,432)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,1080,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,1080,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,1080,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 <path transform="matrix(1,0,0,-1,1152,432)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,1152,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,1152,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,1152,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <path transform="matrix(1,0,0,-1,0,417.544)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#dfe7f3" d="M1149.2511 23.838135H1173.8256V46.253705H1149.2511Z"/>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M1179.8256 17.838135H1204.4V35.534639H1179.8256Z" fill-opacity=".25"/>
 <g clip-path="url(#clip_145)">
 <path transform="matrix(1,0,0,-1,1152,432)" d="M0 0H72V72H0Z" fill="#fb7185"/>
 <path transform="matrix(1,0,0,-1,1152,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#fb7185"/>
-<path transform="matrix(1,0,0,-1,1152,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f1d2e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,1152,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <path transform="matrix(1,0,0,-1,0,417.544)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#dfe7f3" d="M1173.8256 23.838135H1198.4V41.534639H1173.8256Z"/>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M1221.6022 17.838135H1246.1766V37.89417H1221.6022Z" fill-opacity=".25"/>
@@ -1396,10 +1396,10 @@
 <g clip-path="url(#clip_146)">
 <path transform="matrix(1,0,0,-1,1224,432)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,1224,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,1224,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,1224,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 <path transform="matrix(1,0,0,-1,1224,360)" d="M0 0H72V72H0Z" fill="#fbbf24"/>
 <path transform="matrix(1,0,0,-1,1224,360)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#fbbf24"/>
-<path transform="matrix(1,0,0,-1,1224,360)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#92400e" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,1224,360)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <path transform="matrix(1,0,0,-1,0,417.544)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#dfe7f3" d="M1240.1766 23.838135H1264.7511V76.92764H1240.1766Z"/>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M1270.7511 17.838135H1295.3256V96.88251H1270.7511Z" fill-opacity=".25"/>
@@ -1414,20 +1414,20 @@
 <g clip-path="url(#clip_149)">
 <path transform="matrix(1,0,0,-1,1296,432)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,1296,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,1296,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,1296,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 <path transform="matrix(1,0,0,-1,1296,360)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,1296,360)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,1296,360)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
+<path transform="matrix(1,0,0,-1,1296,360)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36"/>
 </g>
 <path transform="matrix(1,0,0,-1,0,417.544)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#dfe7f3" d="M1331.1022 23.838135H1355.6766V74.56811H1331.1022Z"/>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M1361.6766 17.838135H1386.2511V44.97277H1361.6766Z" fill-opacity=".25"/>
 <g clip-path="url(#clip_150)">
 <path transform="matrix(1,0,0,-1,1296,432)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,1296,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,1296,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,1296,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 <path transform="matrix(1,0,0,-1,1368,432)" d="M0 0H72V72H0Z" fill="#34d399"/>
 <path transform="matrix(1,0,0,-1,1368,432)" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36" fill="#34d399"/>
-<path transform="matrix(1,0,0,-1,1368,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#065f46" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
+<path transform="matrix(1,0,0,-1,1368,432)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffffff" d="M-36 36 36 108M-24 24 48 96M-12 12 60 84M0 0 72 72M12-12 84 60M24-24 96 48M36-36 108 36M-36 36 36-36M-24 48 48-24M-12 60 60-12M0 72 72 0M12 84 84 12M24 96 96 24M36 108 108 36"/>
 </g>
 <path transform="matrix(1,0,0,-1,0,417.544)" stroke-width="2.2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#dfe7f3" d="M1355.6766 23.838135H1380.2511V50.97277H1355.6766Z"/>
 <path fill="#dfe7f3" transform="matrix(1,0,0,-1,0,417.544)" d="M1403.4533 17.838135H1428.0277V151.15178H1403.4533Z" fill-opacity=".25"/>
