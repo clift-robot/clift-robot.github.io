@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLIFT — Talk Slides</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./slides.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237cb3ff'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Cpath d='M21.5 11.2a6.4 6.4 0 1 0 0 9.6' fill='none' stroke='url(%23g)' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script defer src="./slides.js"></script>
+</head>
+<body>
+
+<div class="deck">
+
+  <!-- 1 · title -->
+  <section class="slide slide-title slide-full">
+    <div class="stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="center-col">
+        <h1 class="wordmark grad">CLIFT</h1>
+        <p class="deck-line">Turning Gemini Robotics On&#8209;Device into Humanoid Specialists<br>
+          via Non&#8209;Invasive Closed&#8209;Loop Iterative Fine&#8209;Tuning</p>
+        <p class="authors">
+          Yuxin Chen, Hari Srikanth, Nathan Jew, Menglin Wu, Pengcheng Wang, Junli Ren,<br>
+          Masayoshi Tomizuka, Peng Xu, Jinyu Xie, Ran &ldquo;Thomas&rdquo; Tian
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · background: robot FMs are here -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Robot foundation models are getting remarkably capable</h2>
+      <div class="tiles">
+        <div class="tile">
+          <video muted loop playsinline preload="metadata" poster="./static/images/bg_aloha_poster.jpg?v=3" src="./static/videos/bg_aloha.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/bg_aloha_poster.jpg?v=3" alt="">
+          <p class="tile-name">Bimanual manipulation</p>
+        </div>
+        <div class="tile">
+          <video muted loop playsinline preload="metadata" poster="./static/images/bg_humanoid_poster.jpg?v=3" src="./static/videos/bg_humanoid.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/bg_humanoid_poster.jpg?v=3" alt="">
+          <p class="tile-name">Humanoids</p>
+        </div>
+        <div class="tile">
+          <video muted loop playsinline preload="metadata" poster="./static/images/bg_hero_poster.jpg?v=3" src="./static/videos/bg_hero.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/bg_hero_poster.jpg?v=3" alt="">
+          <p class="tile-name">Language-conditioned skills</p>
+        </div>
+      </div>
+      <p class="note center">One generalist policy — many tasks, many embodiments, out of the box.&ensp;<span class="credit">footage: Google DeepMind, Gemini Robotics</span></p>
+    </div>
+  </section>
+
+  <!-- 3 · background: LLMs behind an API -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">In language, capability already lives behind an API</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="code-card">
+<pre><span class="c-dim">$</span> curl https://api.openai.com/v1/<span class="c-hl">fine_tuning</span>/jobs \
+    -H "Authorization: Bearer $OPENAI_API_KEY" \
+    -d '{
+      "model": "gpt-4o",
+      "training_file": <span class="c-str">"file-demos-abc123"</span>
+    }'
+
+<span class="c-dim">{ "object": "fine_tuning.job", "status": "queued", ... }</span>
+<span class="c-pos">&rarr; ft:gpt-4o:your-org::a1b2c3</span></pre>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>The strongest language models are <strong>closed-weight</strong> — no parameters, gradients, or logits for downstream users</li>
+            <li>Adaptation is a managed service: <strong>upload training data, receive a tuned model</strong></li>
+            <li>This is the norm across the frontier</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · background: robotics follows -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Robotics is following the same playbook</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_intro_poster.jpg?v=3" src="./static/videos/anim_intro.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/anim_intro_poster.jpg?v=3" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>The most capable robot foundation models <strong>may not be fully open-weight</strong></li>
+            <li>Capability lives behind a service, not a checkpoint</li>
+            <li>Developers may get only one interface: <strong>a managed SFT API</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · GROD -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Gemini Robotics On&#8209;Device: a powerful foundation</h2>
+      <div class="cols">
+        <div class="col-text">
+          <ul>
+            <li>A powerful robot foundation model, designed to run <strong>locally on robots</strong></li>
+            <li>Exposed through a <strong>managed SFT API</strong></li>
+            <li>Fine-tuned on the same demonstrations, it already far outperforms open-weight alternatives</li>
+          </ul>
+          <div class="hchart">
+            <div class="hlegend">
+              <span class="hkey"><i class="hswatch hswatch-grod"></i>GROD (SFT)</span>
+              <span class="hkey"><i class="hswatch hswatch-pi"></i>&pi;<sub>0.5</sub> (SFT)</span>
+            </div>
+            <div class="hgroup">
+              <p class="hlabel">Box packing</p>
+              <div class="hrow"><div class="htrack"><i class="hfill" style="--w: 93%"></i></div><span class="hval">93</span></div>
+              <div class="hrow"><div class="htrack"><i class="hfill hfill-dim" style="--w: 59%"></i></div><span class="hval">59</span></div>
+            </div>
+            <div class="hgroup">
+              <p class="hlabel">Cup insertion</p>
+              <div class="hrow"><div class="htrack"><i class="hfill" style="--w: 70%"></i></div><span class="hval">70</span></div>
+              <div class="hrow"><div class="htrack"><i class="hfill hfill-dim" style="--w: 50%"></i></div><span class="hval">50</span></div>
+            </div>
+            <div class="hgroup">
+              <p class="hlabel">Bimanual plate handover</p>
+              <div class="hrow"><div class="htrack"><i class="hfill" style="--w: 53%"></i></div><span class="hval">53</span></div>
+              <div class="hrow"><div class="htrack"><i class="hfill hfill-dim" style="--w: 5%"></i></div><span class="hval">5</span></div>
+            </div>
+            <p class="hfoot">success rate % &middot; 100 trials &middot; same demonstrations</p>
+          </div>
+        </div>
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_grod_poster.jpg?v=3" src="./static/videos/anim_grod.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/anim_grod_poster.jpg?v=3" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · failures -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Imitation alone leaves a deployment gap</h2>
+      <div class="duo">
+        <div>
+          <div class="clip"><video muted playsinline preload="metadata" poster="./static/images/anim_trend_poster.jpg?v=7" src="./static/videos/anim_trend.mp4?v=7"></video>
+          <img class="print-poster" src="./static/images/anim_trend_poster.jpg?v=7" alt=""></div>
+          <p class="cap">Success rate slides as contact gets richer</p>
+        </div>
+        <div>
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_fails_poster.jpg?v=3" src="./static/videos/anim_fails.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/anim_fails_poster.jpg?v=3" alt=""></div>
+          <div class="pillrow">
+            <span class="pill-tag">after deployment</span>
+            <span class="pill">covariate shift</span>
+            <span class="pill">real-world dynamics</span>
+            <span class="pill">controller-specific failures</span>
+          </div>
+        </div>
+      </div>
+      <p class="note center">A limit of SFT-only adaptation — for any policy, not any particular model.</p>
+    </div>
+  </section>
+
+  <!-- 5 · the wall -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Every door into closed-loop training is locked</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_locked_poster.jpg?v=6" src="./static/videos/anim_locked.mp4?v=6"></video>
+          <img class="print-poster" src="./static/images/anim_locked_poster.jpg?v=6" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>Mastery takes practice: the robot must learn <strong>in closed loop</strong></li>
+            <li>Standard closed-loop learning needs <strong>gradients, losses, action likelihoods, custom objectives</strong></li>
+            <li>A closed-weight model exposes none of them — by design</li>
+          </ul>
+          <p class="note">The only access point: a managed SFT API.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · question -->
+  <section class="slide slide-full">
+    <div class="stage">
+      <div class="center-col statement">
+        <h2 class="big-q">How can a closed-weight model<br>learn in <em class="grad-inline">closed loop</em>?</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · reveal -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h"><span class="grad-inline">CLIFT</span> — Closed-Loop Iterative Fine-Tuning</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_reveal_poster.jpg?v=3" src="./static/videos/anim_reveal.mp4?v=4"></video>
+          <img class="print-poster" src="./static/images/anim_reveal_poster.jpg?v=3" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>We cannot open the model —<br><strong>but we can change what it learns from</strong></li>
+            <li>Not just expert demonstrations: the robot&rsquo;s <strong>entire deployment experience</strong></li>
+            <li>Successes, failures, and everything in between</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- m2 · problem setting: the interface, formally -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">problem setting</p>
+      <h2 class="slide-h">The entire interface: a dataset in, a policy out</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="code-card">
+<pre><span class="c-dim">// the managed SFT interface, abstractly</span>
+<span class="c-hl">F</span><span class="c-dim">SFT</span> :  D  &rarr;  &pi;
+
+D = { (o<sub>t</sub>,  &#8467;,  a<sub>t</sub>) }  <span class="c-dim">obs &middot; instruction &middot; action chunk</span>
+
+<span class="c-pos">&rarr; returns a fine-tuned policy &pi;</span>
+
+<span class="c-dim">exposed:</span>  submit data &middot; receive policy
+<span class="c-neg">hidden:</span>   weights &#10005;  gradients &#10005;  likelihoods &#10005;  losses &#10005;</pre>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>A <strong>black-box operator</strong>: submit observation&ndash;instruction&ndash;action-chunk tuples, receive a tuned policy</li>
+            <li>This is the <strong>only update operation</strong> &mdash; there is no other lever</li>
+            <li>Everything starts from <strong>&pi;<sub>0</sub> = F<sub>SFT</sub>(D<sub>demo</sub>)</strong>: the base model fine-tuned on teleoperated demonstrations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- m3 · problem setting: the objective -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">problem setting</p>
+      <h2 class="slide-h">The goal is reinforcement &mdash; the access is imitation</h2>
+      <div class="obj-card">
+        <p class="obj-formula">&pi;<sup>&#8727;</sup> = arg max<sub>&pi;</sub>&ensp;<span class="obj-r">&#120124;<sub>o&thinsp;&sim;&thinsp;p<sub>&pi;</sub></sub>&thinsp;[ &Sigma;<sub>t</sub> R<sub>&theta;</sub>(o<sub>t</sub>; &#8467;) ]</span>&ensp;&minus;&ensp;<span class="obj-kl">&beta; &middot; KL( &pi; &#8741; &pi;<sub>0</sub> )</span></p>
+        <div class="obj-legend">
+          <span class="obj-key"><i class="obj-swatch obj-swatch-r"></i>maximize reward under the policy&rsquo;s <strong>own closed-loop distribution</strong> &mdash; not the demo distribution</span>
+          <span class="obj-key"><i class="obj-swatch obj-swatch-kl"></i>stay anchored to the imitation policy &pi;<sub>0</sub> at deployment-visited states</span>
+        </div>
+      </div>
+      <div class="lockrow">
+        <div class="lockitem"><div class="lockhead"><span class="lockname">PPO</span><span class="lockx">&#10005; not exposed</span></div><span class="lockneed">needs log &pi;(a|o) and backprop through the model</span></div>
+        <div class="lockitem"><div class="lockhead"><span class="lockname">Advantage-weighted regression</span><span class="lockx">&#10005; not exposed</span></div><span class="lockneed">needs the loss, reweighted by exp(A/&beta;)</span></div>
+      </div>
+      <p class="note center">Every route that needs internal signals is ruled out. F<sub>SFT</sub> only accepts data.</p>
+    </div>
+  </section>
+
+  <!-- m4 · key insight (statement) -->
+  <section class="slide slide-full">
+    <div class="stage">
+      <div class="center-col statement">
+        <h2>We cannot touch the model.<br>So the <em class="grad-inline">reward moves into the data</em>.</h2>
+        <p class="sub">Score deployment rollouts &middot; write the verdict into each training tuple &middot; let the API run ordinary SFT.<br>The model and its training procedure stay untouched.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- m5 · method overview -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">A deployment-time data flywheel — API-only, non-invasive</h2>
+      <img class="fig-dark fig-teaser" src="./static/images/teaser_dark.svg" alt="The CLIFT flywheel diagram">
+    </div>
+  </section>
+
+  <!-- m6 · roadmap: four moves -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">the flywheel</p>
+      <h2 class="slide-h">Four moves, all through the same API</h2>
+      <div class="flow flow-road">
+        <div class="flow-stage"><div class="flow-card road-card"><h3><span class="step-num">01</span>Score</h3><p>A reward model calibrated to human preference scores every rollout, step by step</p></div></div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-stage"><div class="flow-card road-card"><h3><span class="step-num">02</span>Relabel</h3><p>Each action chunk earns an advantage token, judged against similar states</p></div></div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-stage"><div class="flow-card road-card"><h3><span class="step-num">03</span>Condition</h3><p>Fine-tune on successes and failures alike; at inference, the token flips to <strong class="pos">True</strong></p></div></div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-stage"><div class="flow-card road-card"><h3><span class="step-num">04</span>Iterate</h3><p>Append, re-fine-tune from the base model, deploy again &mdash; a stronger specialist each cycle</p></div></div>
+      </div>
+      <p class="loop-note">&#8635;&ensp;04 hands the new policy back to 01 &mdash; the loop is the method</p>
+    </div>
+  </section>
+
+  <!-- s1 · score: why a reward model at all -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">01</span>Score</p>
+      <h2 class="slide-h">Judging rollouts like a human is the hard part</h2>
+      <div class="flow flow-s1">
+        <div class="flow-stage stack2">
+          <div class="flow-card">
+            <h3>Prompt a zero-shot VLM</h3>
+            <p>Tracks surface progress, but misses execution failures &mdash; a jerky, unsafe rollout can still &ldquo;look&rdquo; complete</p>
+            <div class="vrow"><span class="v-pro">&#10003; scalable</span><span class="v-con">&#10005; miscalibrated</span></div>
+          </div>
+          <div class="flow-card">
+            <h3>Label rewards by hand</h3>
+            <p>Humans judge execution quality reliably &mdash; but dense per-step labels for every rollout are prohibitive</p>
+            <div class="vrow"><span class="v-pro">&#10003; calibrated</span><span class="v-con">&#10005; doesn&rsquo;t scale</span></div>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>combine</span></div>
+        <div class="flow-stage">
+          <div class="flow-card flow-card-hl s1-res">
+            <h3>&#10022; Select-then-distill</h3>
+            <p>Let the VLM <strong>generate</strong> candidate dense rewards, let human preferences <strong>select</strong> among them &mdash; then <strong>distill</strong> the winners into one reusable reward model</p>
+            <div class="chips chips-pos"><span>dense</span><span>calibrated</span><span>cheap for humans</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="note center">100 pairwise comparisons is the entire per-rollout labeling budget &mdash; plus one short rubric per task.</p>
+    </div>
+  </section>
+
+  <!-- 9a · reward training -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">01</span>Score</p>
+      <h2 class="slide-h">A reward model calibrated to human judgment</h2>
+      <div class="flow">
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>VLM reward generator</h3>
+            <p><strong>K&thinsp;=&thinsp;12</strong> candidate per-step reward traces per rollout, via temperature sampling</p>
+            <div class="chips"><span>r&#8321;</span><span>r&#8322;</span><span>&#8230;</span><span>r&#8321;&#8322;</span></div>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>select</span></div>
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>A &nbsp;&gt;&nbsp; B</h3>
+            <div class="ab-pair">
+              <div class="ab-good"><video muted loop playsinline preload="metadata" src="./static/videos/ab_a.mp4?v=3"></video><span>A</span></div>
+              <div class="ab-bad"><video muted loop playsinline preload="metadata" src="./static/videos/ab_b.mp4?v=3"></video><span>B</span></div>
+            </div>
+            <p><strong>100 rollout pairs</strong>, judged side-by-side from three viewpoints by an expert</p>
+            <div class="chips"><span>cleaner grasps</span><span>smoother motion</span><span>safer contacts</span></div>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>distill</span></div>
+        <div class="flow-stage">
+          <div class="flow-card flow-card-hl">
+            <h3>&#10022; Dense reward model</h3>
+            <p>Qwen3-VL, regressed onto the &asymp;200 preference-labeled rollouts &middot; per-step, reusable across cycles</p>
+            <div class="chips chips-pos"><span>progress</span><span>quality</span><span>safety</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="note center">Select: keep the candidates whose induced return rankings best match human preferences &middot; calibrate once, score every rollout.</p>
+    </div>
+  </section>
+
+  <!-- s3 · score: the generator prompt, zoomed in -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">01</span>Score</p>
+      <h2 class="slide-h">Zoom in: a VLM becomes a dense reward generator</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="code-card code-card-sm">
+<pre>You are an expert reward labeler for robot manipulation videos.
+TASK: <span class="c-str">{TASK_INSTRUCTION}</span>
+
+REWARD RUBRIC <span class="c-dim">(anchor scores in [0,100]; interpolate)</span>:
+  - 0: no relevant action; robot has not engaged
+  - <span class="c-str">{RUBRIC}</span>   <span class="c-dim">&larr; milestones &rarr; anchor scores</span>
+
+<span class="c-hl">HARD FAILURES</span> <span class="c-dim">(override the rubric)</span>: if visible in a
+frame, its reward <span class="c-hl">MUST be 0</span> &mdash; no matter what
+milestone was reached earlier.
+
+Frames arrive in <span class="c-hl">SHUFFLED order</span> &mdash; judge each purely
+on visual content.
+
+OUTPUT: JSON &mdash; { frame_index, task_reward, frame_description }</pre>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li><strong>Rubric anchors</strong> encode the task-level preference; the VLM interpolates between milestones</li>
+            <li><strong>Hard failures override</strong> &mdash; no partial credit for a milestone that ends in a failure state</li>
+            <li><strong>Shuffled frames</strong> &mdash; each frame judged on what it shows, not where it sits in the episode</li>
+            <li>Temperature sampling &rarr; <strong>K&thinsp;=&thinsp;12 candidate reward traces</strong> per rollout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- s4 · score: select & distill, zoomed in -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">01</span>Score</p>
+      <h2 class="slide-h">Zoom in: keep what humans agree with, distill it once</h2>
+      <div class="flow flow-eq flow-eq-slim">
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>Select</h3>
+            <div class="figzone figzone-sm">
+              <svg class="mini-fig" viewBox="0 0 320 108" aria-hidden="true">
+                <text x="8" y="14" fill="#c9d3e4" font-size="12" font-family="JetBrains Mono, monospace">human verdict:  A &#8827; B</text>
+                <text x="8" y="44" fill="#7d8fa9" font-size="11" font-family="JetBrains Mono, monospace">pick 1</text>
+                <rect x="60" y="32" width="118" height="9" rx="4.5" fill="#5b9dff"/>
+                <text x="184" y="41" fill="#8da3c0" font-size="10" font-family="JetBrains Mono, monospace">G&#8321;</text>
+                <rect x="60" y="46" width="60" height="9" rx="4.5" fill="rgba(141,163,192,0.4)"/>
+                <text x="126" y="55" fill="#7d8fa9" font-size="10" font-family="JetBrains Mono, monospace">G&#8322;</text>
+                <text x="288" y="48" fill="#34d399" font-size="15" font-family="JetBrains Mono, monospace">&#10003;</text>
+                <text x="8" y="82" fill="#7d8fa9" font-size="11" font-family="JetBrains Mono, monospace">pick 2</text>
+                <rect x="60" y="70" width="48" height="9" rx="4.5" fill="rgba(91,157,255,0.35)"/>
+                <text x="114" y="79" fill="#8da3c0" font-size="10" font-family="JetBrains Mono, monospace">G&#8321;</text>
+                <rect x="60" y="84" width="104" height="9" rx="4.5" fill="rgba(141,163,192,0.4)"/>
+                <text x="170" y="93" fill="#7d8fa9" font-size="10" font-family="JetBrains Mono, monospace">G&#8322;</text>
+                <text x="288" y="86" fill="#fda4af" font-size="15" font-family="JetBrains Mono, monospace">&#10005;</text>
+              </svg>
+            </div>
+            <p class="cardline">One trace is chosen per rollout; keep the picks whose returns agree with the most human verdicts &mdash; A&thinsp;&#8827;&thinsp;B should mean G<sub>A</sub>&thinsp;&gt;&thinsp;G<sub>B</sub></p>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>distill</span></div>
+        <div class="flow-stage">
+          <div class="flow-card flow-card-hl">
+            <h3>&#10022; Distill into R<sub>&theta;</sub></h3>
+            <div class="figzone figzone-sm">
+              <svg class="mini-fig" viewBox="0 0 320 108" aria-hidden="true">
+                <rect x="8" y="38" width="22" height="16" rx="3" fill="rgba(141,163,192,0.35)"/>
+                <rect x="34" y="38" width="22" height="16" rx="3" fill="rgba(141,163,192,0.35)"/>
+                <rect x="60" y="38" width="22" height="16" rx="3" fill="rgba(141,163,192,0.35)"/>
+                <text x="45" y="70" fill="#7d8fa9" font-size="10" font-family="JetBrains Mono, monospace" text-anchor="middle">32 frames + &#8467;</text>
+                <text x="94" y="50" fill="#7cb3ff" font-size="13" font-family="JetBrains Mono, monospace">&rarr;</text>
+                <rect x="112" y="30" width="118" height="32" rx="8" fill="none" stroke="rgba(124,179,255,0.55)" stroke-width="1.3"/>
+                <text x="171" y="46" fill="#e8edf5" font-size="11.5" font-family="JetBrains Mono, monospace" text-anchor="middle">Qwen3-VL</text>
+                <text x="171" y="58" fill="#7d8fa9" font-size="9.5" font-family="JetBrains Mono, monospace" text-anchor="middle">LoRA r=128 &middot; MSE</text>
+                <text x="238" y="50" fill="#7cb3ff" font-size="13" font-family="JetBrains Mono, monospace">&rarr;</text>
+                <polyline points="258,72 270,66 280,52 290,48 300,36 312,32" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/>
+                <text x="286" y="90" fill="#7d8fa9" font-size="10" font-family="JetBrains Mono, monospace" text-anchor="middle">r<tspan font-size="7.5" dy="2">1:T</tspan></text>
+              </svg>
+            </div>
+            <p class="cardline">Regress per-step rewards onto the &asymp;200 selected traces &middot; one shared model for all tasks</p>
+            <div class="chips chips-pos"><span>trained once</span><span>frozen across cycles</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="note center">The human budget is spent exactly once &mdash; the distilled R<sub>&theta;</sub> scores every rollout of every later cycle for free.</p>
+    </div>
+  </section>
+
+  <!-- 9b · scoring -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">01</span>Score</p>
+      <h2 class="slide-h">The reward model watches every rollout</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_reward_poster.jpg?v=4" src="./static/videos/anim_reward.mp4?v=4"></video>
+          <img class="print-poster" src="./static/images/anim_reward_poster.jpg?v=4" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>Scores <strong>task progress, execution quality, and safety</strong> at every step</li>
+            <li>Judges rollouts like a human operator</li>
+            <li>Credit assigned <strong>chunk by chunk</strong>, not per episode</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- s6 · score: real reward curves, chunk-level credit -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">01</span>Score</p>
+      <h2 class="slide-h">On real rollouts, credit lands chunk by chunk</h2>
+      <img class="fig-dark fig-reward" src="./static/images/reward_dark.svg" alt="Per-step reward predictions and advantage labels on a failed box-packing episode and a successful cup-insertion episode">
+      <p class="note center">A <strong>failed</strong> packing episode still contains well-executed chunks &middot; a <strong>successful</strong> insertion contains chunks a human would reject &mdash; episode-level labels can express neither.</p>
+    </div>
+  </section>
+
+  <!-- r1 · relabel: credit must be state-aware -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">02</span>Relabel</p>
+      <h2 class="slide-h">A return only means something relative to its state</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="duo-sm">
+            <div class="flow-card lad-card">
+              <h3>hard state</h3>
+              <p class="cardline">most attempts from here fail</p>
+              <div class="ladder" aria-hidden="true">
+                <div class="lrow"><i class="lbar lpos" style="width: 71%"></i></div>
+                <div class="lrow lrow-q"><i class="lbar lpos" style="width: 62%"></i><em>G&thinsp;=&thinsp;62</em></div>
+                <div class="pctline"><span>top 30%</span></div>
+                <div class="lrow"><i class="lbar" style="width: 40%"></i></div>
+                <div class="lrow"><i class="lbar" style="width: 33%"></i></div>
+                <div class="lrow"><i class="lbar" style="width: 26%"></i></div>
+              </div>
+              <div class="tokrow"><span class="tok-true">Advantage=True</span></div>
+            </div>
+            <div class="flow-card lad-card">
+              <h3>easy state</h3>
+              <p class="cardline">most attempts from here succeed</p>
+              <div class="ladder" aria-hidden="true">
+                <div class="lrow"><i class="lbar lpos" style="width: 92%"></i></div>
+                <div class="lrow"><i class="lbar lpos" style="width: 88%"></i></div>
+                <div class="pctline"><span>top 30%</span></div>
+                <div class="lrow"><i class="lbar" style="width: 79%"></i></div>
+                <div class="lrow lrow-q"><i class="lbar" style="width: 62%"></i><em>G&thinsp;=&thinsp;62</em></div>
+                <div class="lrow"><i class="lbar" style="width: 55%"></i></div>
+              </div>
+              <div class="tokrow"><span class="tok-false">Advantage=False</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>The same return can be <strong>excellent in a hard recovery state</strong> and mediocre in an easy one</li>
+            <li>So each chunk must be judged against <strong>what is achievable from its starting state</strong></li>
+            <li>Prior work fits a <strong>value function</strong> for this baseline &mdash; retrained every cycle, and, learned from binary success, it collapses to &ldquo;time-to-success&rdquo;: blind to execution quality</li>
+          </ul>
+          <p class="note">CLIFT&rsquo;s baseline is <strong>non-parametric</strong>: retrieve what the robot did from lookalike states.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9c · advantage labeling process -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">02</span>Relabel</p>
+      <h2 class="slide-h">How a chunk earns its advantage token</h2>
+      <div class="flow flow-eq">
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>Return</h3>
+            <div class="figzone">
+              <svg class="mini-fig" viewBox="0 0 300 100" aria-hidden="true">
+                <defs><linearGradient id="winfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b9dff" stop-opacity="0.25"/><stop offset="1" stop-color="#5b9dff" stop-opacity="0.02"/></linearGradient></defs>
+                <line x1="6" y1="88" x2="294" y2="88" stroke="rgba(141,163,192,0.25)" stroke-width="1"/>
+                <path d="M96,58 L120,44 150,33 180,37 214,28 L214,88 L96,88 Z" fill="url(#winfill)"/>
+                <line x1="96" y1="16" x2="96" y2="88" stroke="rgba(124,179,255,0.55)" stroke-width="1" stroke-dasharray="3 3"/>
+                <line x1="214" y1="16" x2="214" y2="88" stroke="rgba(124,179,255,0.55)" stroke-width="1" stroke-dasharray="3 3"/>
+                <polyline points="10,78 40,72 70,66 96,58" fill="none" stroke="rgba(91,157,255,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <polyline points="96,58 120,44 150,33 180,37 214,28" fill="none" stroke="#5b9dff" stroke-width="3" stroke-linecap="round"/>
+                <polyline points="214,28 250,26 290,24" fill="none" stroke="rgba(91,157,255,0.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="96" cy="58" r="3.5" fill="#eff6ff"/><circle cx="214" cy="28" r="3.5" fill="#eff6ff"/>
+                <text x="155" y="10" fill="#7cb3ff" font-size="11" font-family="JetBrains Mono, monospace" text-anchor="middle">1.8 s</text>
+                <text x="292" y="84" fill="#7d8fa9" font-size="10" font-family="JetBrains Mono, monospace" text-anchor="end">t &#8594;</text>
+              </svg>
+            </div>
+            <p class="formula">G(&tau;) = &Sigma; &gamma;<sup>&Delta;t</sup> R<sub>&theta;</sub>(o<sub>t</sub>; &#8467;)</p>
+            <p class="cardline">the chunk&rsquo;s discounted return over its window</p>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>retrieve</span></div>
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>Similar states</h3>
+            <div class="figzone">
+              <div class="thumbrow">
+                <figure class="thumb thumb-q"><img src="./static/images/ret_q.png" alt="query observation"><figcaption>query</figcaption></figure>
+                <figure class="thumb"><img src="./static/images/ret_m1.png" alt="retrieved match 1"><figcaption>match 1</figcaption></figure>
+                <figure class="thumb"><img src="./static/images/ret_m2.png" alt="retrieved match 2"><figcaption>match 2</figcaption></figure>
+              </div>
+            </div>
+            <p class="cardline">DINOv3 cosine &middot; best frame per rollout<br>their returns form the comparison set</p>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>rank</span></div>
+        <div class="flow-stage">
+          <div class="flow-card flow-card-hl">
+            <h3>&#10022; Binarize</h3>
+            <div class="figzone">
+              <div class="ladder" aria-hidden="true">
+                <div class="lrow"><i class="lbar lpos" style="width: 88%"></i></div>
+                <div class="lrow lrow-q"><i class="lbar lpos" style="width: 64%"></i><em>this chunk</em></div>
+                <div class="pctline"><span>top 30%</span></div>
+                <div class="lrow"><i class="lbar" style="width: 55%"></i></div>
+                <div class="lrow"><i class="lbar" style="width: 46%"></i></div>
+                <div class="lrow"><i class="lbar" style="width: 37%"></i></div>
+                <div class="lrow"><i class="lbar" style="width: 28%"></i></div>
+                <div class="lrow"><i class="lbar" style="width: 20%"></i></div>
+              </div>
+            </div>
+            <div class="tokrow"><span class="tok-true">Advantage=True</span><span class="cardline">above the cut</span></div>
+            <div class="tokrow"><span class="tok-false">Advantage=False</span><span class="cardline">below the cut</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="note center">The percentile threshold auto-calibrates credit to state difficulty &middot; human demonstrations are always Advantage=True.</p>
+    </div>
+  </section>
+
+  <!-- r3 · relabel: retrieval mechanics, zoomed in -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">02</span>Relabel</p>
+      <h2 class="slide-h">Zoom in: retrieval instead of a value function</h2>
+      <div class="flow flow-eq flow-eq-slim">
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>Embed</h3>
+            <p class="formula">sim(o, o&prime;) = &#10216;&phi;(o), &phi;(o&prime;)&#10217;</p>
+            <p class="cardline">&phi; = frozen DINOv3 (ViT-S/16, d&thinsp;=&thinsp;384), &#8467;<sub>2</sub>-normalized &mdash; cosine similarity on the unit sphere. Nothing task-specific to train.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>match</span></div>
+        <div class="flow-stage">
+          <div class="flow-card">
+            <h3>One frame per rollout</h3>
+            <p class="formula">m<sub>e</sub> = arg max<sub>t</sub> sim(o<sup>e</sup><sub>t</sub>, o<sub>q</sub>)</p>
+            <p class="cardline">Each other rollout contributes only its <strong>single most-similar frame</strong> &mdash; a trajectory&rsquo;s near-identical neighboring frames can&rsquo;t flood the comparison set.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">&rarr;<span>admit</span></div>
+        <div class="flow-stage">
+          <div class="flow-card flow-card-hl">
+            <h3>&#10022; A fair peer group</h3>
+            <p class="formula">sim &ge; &delta; &nbsp;&rarr;&nbsp; one peer chunk</p>
+            <p class="cardline">A single global threshold &delta;, tuned so a query gathers |N| comparable peers on average. Peers share the starting state &mdash; their returns differ mainly in <strong>what the policy did next</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <p class="note center">No value network, nothing retrained per cycle &mdash; the baseline is the robot&rsquo;s own accumulated experience.</p>
+    </div>
+  </section>
+
+  <!-- 10 · relabel -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">02</span>Relabel</p>
+      <h2 class="slide-h">Reward feedback becomes ordinary SFT data</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_encode_poster.jpg?v=4" src="./static/videos/anim_encode.mp4?v=4"></video>
+          <img class="print-poster" src="./static/images/anim_encode_poster.jpg?v=4" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>Each chunk compared, via visual retrieval, against chunks from similar states &rarr; <strong>advantage token</strong></li>
+            <li>Observation and action exactly as executed; the advantage written <strong>into the instruction</strong>, in plain text</li>
+            <li>To the API, this is just supervised data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- r5 · relabel: the assembled fine-tuning set -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">02</span>Relabel</p>
+      <h2 class="slide-h">After relabeling: four bins, one plain-text format</h2>
+      <div class="dsrow">
+        <div class="flow-card ds-card">
+          <h3>Human demos</h3>
+          <p class="ds-prompt">&ldquo;&#10216;task prompt&#10217;,<br><span class="tok-true tok-sm">Advantage=True</span>&rdquo;</p>
+          <p class="cardline">always positive, in every cycle&rsquo;s dataset</p>
+        </div>
+        <div class="flow-card ds-card">
+          <h3>Good chunks</h3>
+          <p class="ds-prompt">&ldquo;&#10216;task prompt&#10217;,<br><span class="tok-true tok-sm">Advantage=True</span>&rdquo;</p>
+          <p class="cardline">top 30% among peers from similar states</p>
+        </div>
+        <div class="flow-card ds-card">
+          <h3>Bad chunks</h3>
+          <p class="ds-prompt">&ldquo;&#10216;task prompt&#10217;,<br><span class="tok-false tok-sm">Advantage=False</span>&rdquo;</p>
+          <p class="cardline">kept as contrastive signal &mdash; not discarded</p>
+        </div>
+        <div class="flow-card ds-card ds-skip">
+          <h3>Skipped chunks</h3>
+          <p class="ds-prompt">&ldquo;&#10216;task prompt&#10217;&rdquo;<br><span class="tok-none tok-sm">no advantage token</span></p>
+          <p class="cardline">not every chunk gets a verdict &mdash; these stay unlabeled</p>
+        </div>
+      </div>
+      <p class="note center">Observations and actions exactly as executed &middot; both labels are trained on &mdash; to F<sub>SFT</sub>, all of it is ordinary supervised data.</p>
+    </div>
+  </section>
+
+  <!-- 11 · condition -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">03</span>Condition</p>
+      <h2 class="slide-h">At inference, the token becomes a switch</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_condition_poster.jpg?v=3" src="./static/videos/anim_condition.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/anim_condition_poster.jpg?v=3" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>During training the advantage token was a label</li>
+            <li>At deployment it is flipped one way — <strong class="pos">True</strong></li>
+            <li>The policy steers toward what humans prefer, away from what the reward model rejected</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- c2 · condition: deployment, zoomed in -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">03</span>Condition</p>
+      <h2 class="slide-h">Zoom in: what deployment actually looks like</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="code-card">
+<pre><span class="c-dim">// every inference call, every task, every cycle</span>
+o = head cameras (regular + wide) + proprioception
+&#8467; = <span class="c-str">"Stack the plate from the rack, </span><span class="c-pos">Advantage=True</span><span class="c-str">"</span>
+
+a = &pi;(o, &#8467;)   <span class="c-dim">classifier-free guidance, &beta; = 0.2</span>
+
+<span class="c-dim">execute the 1.6 s action chunk &rarr; observe &rarr; replan</span></pre>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>The positive token rides in <strong>every inference prompt</strong> &mdash; plain text, no model surgery</li>
+            <li><strong>Classifier-free guidance</strong> (&beta; = 0.2) further amplifies the policy&rsquo;s preference toward high-quality actions</li>
+            <li>One fixed deployment recipe for <strong>every model and variant</strong> &mdash; gains come from training, not inference tricks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- c3 · condition: why a token is enough -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">03</span>Condition</p>
+      <h2 class="slide-h">Why a single token is enough</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="modes-fig">
+            <svg viewBox="0 0 560 250" role="img" aria-label="Training on both labels separates a preferred and a rejected behavior mode; conditioning selects the preferred one and guidance pushes further toward it.">
+              <line x1="30" y1="206" x2="530" y2="206" stroke="rgba(141,163,192,0.3)" stroke-width="1.5"/>
+              <text x="530" y="228" fill="#7d8fa9" font-size="13" font-family="JetBrains Mono, monospace" text-anchor="end">action space</text>
+              <path d="M50,206 C110,206 130,112 175,112 C220,112 240,206 300,206" fill="rgba(251,113,133,0.07)" stroke="rgba(251,113,133,0.55)" stroke-width="2.5"/>
+              <text x="175" y="94" fill="#fda4af" font-size="13.5" font-family="JetBrains Mono, monospace" text-anchor="middle">Advantage=False</text>
+              <path d="M270,206 C330,206 350,66 395,66 C440,66 460,206 520,206" fill="rgba(52,211,153,0.09)" stroke="#34d399" stroke-width="3"/>
+              <text x="395" y="48" fill="#34d399" font-size="13.5" font-family="JetBrains Mono, monospace" text-anchor="middle">Advantage=True</text>
+              <line x1="395" y1="60" x2="395" y2="206" stroke="rgba(52,211,153,0.5)" stroke-width="1.3" stroke-dasharray="4 4"/>
+              <path d="M318,148 C330,120 342,98 360,78" fill="none" stroke="#7cb3ff" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#garr)"/>
+              <defs><marker id="garr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7cb3ff"/></marker></defs>
+              <text x="322" y="24" fill="#7cb3ff" font-size="12.5" font-family="JetBrains Mono, monospace" text-anchor="middle">guidance &beta;=0.2</text>
+            </svg>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>Trained on both labels, the policy learns a <strong>conditional</strong>: good and bad execution, and the contrast between them</li>
+            <li>Conditioning on <strong class="pos">True</strong> selects the preferred mode; guidance pushes further toward it</li>
+            <li>And it is still SFT on actions the robot <strong>actually executed</strong> &mdash; keeping the policy close to real behavior, in the spirit of the objective&rsquo;s anchor</li>
+          </ul>
+          <p class="note">Same family as advantage-conditioned policies &amp; &ldquo;guidance as policy improvement&rdquo; &mdash; injected purely through data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 · iterate -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">04</span>Iterate</p>
+      <h2 class="slide-h">Deploy &rarr; score &rarr; relabel &rarr; fine&#8209;tune — then again</h2>
+      <div class="cols cols-media-heavy">
+        <div class="col-media">
+          <div class="clip"><video muted loop playsinline preload="metadata" poster="./static/images/anim_flywheel_poster.jpg?v=5" src="./static/videos/anim_flywheel.mp4?v=5"></video>
+          <img class="print-poster" src="./static/images/anim_flywheel_poster.jpg?v=5" alt=""></div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li>Relabeled rollouts appended to a <strong>cumulative dataset</strong></li>
+            <li>Base model re-fine-tuned <strong>from scratch</strong> each cycle — avoids distributional drift</li>
+            <li>Each cycle: a stronger task specialist</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- i2 · iterate: cycle mechanics -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">04</span>Iterate</p>
+      <h2 class="slide-h">Each cycle: grow the data, retrain from the base</h2>
+      <div class="cols">
+        <div class="col-media">
+          <div class="obj-card obj-card-sm">
+            <p class="obj-formula">D<sub>k</sub> = D<sub>demo</sub> &cup; D<sub>rollout</sub><sup>1:k</sup></p>
+            <p class="obj-formula">&pi;<sub>k+1</sub> = F<sub>SFT</sub>(D<sub>k</sub>)&ensp;<span class="obj-note">from the base checkpoint</span></p>
+          </div>
+          <div class="stat-rail">
+            <div class="stat"><span class="stat-num">2&thinsp;h</span><span class="stat-label">teleop demos per task</span></div>
+            <div class="stat"><span class="stat-num">100</span><span class="stat-label">preference pairs, once</span></div>
+            <div class="stat"><span class="stat-num">100</span><span class="stat-label">rollouts per task &middot; cycle</span></div>
+            <div class="stat"><span class="stat-num">10</span><span class="stat-label">SFT epochs per cycle</span></div>
+          </div>
+        </div>
+        <div class="col-text">
+          <ul>
+            <li><strong>Cumulative</strong>: each cycle&rsquo;s relabeled rollouts join the pot; demonstrations stay pinned <strong class="pos">Advantage=True</strong></li>
+            <li>Every cycle fine-tunes <strong>from the base model</strong>, never from &pi;<sub>k</sub> &mdash; no compounding drift, full pretrained capacity reused</li>
+            <li>R<sub>&theta;</sub> trained <strong>once</strong>, frozen for all cycles</li>
+            <li><strong>Deployment is evaluation</strong>: the same 100 rollouts score the policy and become the next cycle&rsquo;s training data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- i3 · iterate: why keep failures (dense vs episode filtering) -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">04</span>Iterate</p>
+      <h2 class="slide-h">Why keep the failures? The hardest task answers</h2>
+      <div class="cols">
+        <div class="col-text">
+          <ul>
+            <li>Same rollouts, two recipes: <strong>filter episodes</strong> &mdash; keep only the top 30% by return &mdash; vs <strong>relabel every chunk</strong></li>
+            <li>Easy tasks: successes are plentiful, discarding the rest costs little &mdash; the variants match</li>
+            <li>Plate handover: successes are rare, <strong>most rollouts fail</strong> &mdash; the discarded 70% is exactly where the signal lives</li>
+            <li>Chunk relabeling <strong>recovers good chunks from failed rollouts</strong> and turns bad ones into contrastive negatives</li>
+          </ul>
+        </div>
+        <div class="col-media">
+          <div class="hchart hchart-wide">
+            <div class="hlegend">
+              <span class="hkey"><i class="hswatch hswatch-grod"></i>dense chunk relabeling</span>
+              <span class="hkey"><i class="hswatch hswatch-pi"></i>top-30% episode filtering</span>
+            </div>
+            <div class="hgroup">
+              <p class="hlabel">Bimanual plate handover &middot; after 2 cycles</p>
+              <div class="hrow"><div class="htrack"><i class="hfill" style="--w: 96%"></i></div><span class="hval">96</span></div>
+              <div class="hrow"><div class="htrack"><i class="hfill hfill-dim" style="--w: 84%"></i></div><span class="hval">&asymp;84</span></div>
+            </div>
+            <div class="hgroup">
+              <p class="hlabel">Box packing &middot; cup insertion</p>
+              <div class="hrow"><div class="htrack"><i class="hfill" style="--w: 99%"></i></div><span class="hval">&asymp;100</span></div>
+              <div class="hrow"><div class="htrack"><i class="hfill hfill-dim" style="--w: 98%"></i></div><span class="hval">&asymp;100</span></div>
+            </div>
+            <p class="hfoot">success rate % &middot; both variants near-perfect on the easier tasks &middot; the gap opens where failures dominate</p>
+          </div>
+        </div>
+      </div>
+      <p class="note center">Failure is not waste &mdash; it is exactly the training signal the hard tasks need.</p>
+    </div>
+  </section>
+
+  <!-- i4 · method recap, zoom out -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker"><span class="step-num">04</span>Iterate</p>
+      <h2 class="slide-h">Zoom out: the whole loop, one more time</h2>
+      <img class="fig-dark fig-teaser-sm" src="./static/images/teaser_dark.svg" alt="The CLIFT flywheel diagram, revisited">
+      <div class="check-rail">
+        <span class="chk"><i>&#10003;</i>01 score &mdash; preference-calibrated dense reward</span>
+        <span class="chk"><i>&#10003;</i>02 relabel &mdash; retrieval-based advantage tokens</span>
+        <span class="chk"><i>&#10003;</i>03 condition &mdash; flip the token to True</span>
+        <span class="chk"><i>&#10003;</i>04 iterate &mdash; fresh fine-tune from base</span>
+      </div>
+      <p class="note center">Everything travels through F<sub>SFT</sub> as ordinary supervised data &mdash; <strong>the model box never opens.</strong></p>
+    </div>
+  </section>
+
+  <!-- 13 · setup -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Real Unitree G1 humanoid &middot; three contact-rich tasks</h2>
+      <div class="cols cols-even cols-setup">
+        <div class="col-media">
+          <div class="plate plate-photo"><img src="./static/images/teleop.png" alt="Whole-body VR teleoperation"></div>
+          <p class="cap">Whole-body VR teleoperation for demonstrations</p>
+        </div>
+        <div class="col-media">
+          <img class="fig-dark" src="./static/images/tasks_dark.svg" alt="Task suite: keyframes of box packing, cup insertion, and bimanual plate handover">
+          <p class="cap">Box packing &middot; cup insertion &middot; bimanual plate handover</p>
+        </div>
+      </div>
+      <p class="note center">Whole-body balancing throughout — end-effector pose and contact geometry keep shifting.</p>
+    </div>
+  </section>
+
+  <!-- 14 · results -->
+  <section class="slide" id="results-slide">
+    <div class="stage">
+      <h2 class="slide-h">Generalist &rarr; specialist, in two cycles</h2>
+      <div class="tiles">
+        <div class="tile">
+          <video muted loop playsinline preload="metadata" poster="./static/images/task_box_poster.jpg?v=3" src="./static/videos/task_box.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/task_box_poster.jpg?v=3" alt="">
+          <p class="tile-name">Box packing</p>
+          <p class="tile-nums"><span class="base">93%</span><span class="arr">&rarr;</span><span class="fin" data-count="100" data-from="93">100%</span></p>
+        </div>
+        <div class="tile">
+          <video muted loop playsinline preload="metadata" poster="./static/images/task_cup_poster.jpg?v=3" src="./static/videos/task_cup.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/task_cup_poster.jpg?v=3" alt="">
+          <p class="tile-name">Cup insertion</p>
+          <p class="tile-nums"><span class="base">70%</span><span class="arr">&rarr;</span><span class="fin" data-count="98" data-from="70">98%</span></p>
+        </div>
+        <div class="tile">
+          <video muted loop playsinline preload="metadata" poster="./static/images/task_plate_poster.jpg?v=3" src="./static/videos/task_plate.mp4?v=3"></video>
+          <img class="print-poster" src="./static/images/task_plate_poster.jpg?v=3" alt="">
+          <p class="tile-name">Bimanual plate handover</p>
+          <p class="tile-nums"><span class="base">53%</span><span class="arr">&rarr;</span><span class="fin" data-count="96" data-from="53">96%</span></p>
+        </div>
+      </div>
+      <p class="note center">Success rate over 100 trials per task &middot; API-only &middot; no additional human demonstrations</p>
+    </div>
+  </section>
+
+  <!-- ra · results chart: SFT baselines (cycles dimmed) -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">results</p>
+      <h2 class="slide-h">One chart, the whole story &mdash; starting from SFT</h2>
+      <div class="rwrap">
+        <img src="./static/images/results_dark_a.svg" alt="Success rate over 100 trials for five adaptation recipes — SFT baseline plus two flywheel cycles on three tasks — cycle bars dimmed, SFT baselines visible">
+      </div>
+      <p class="note center">100 trials per bar &middot; hatching = flywheel cycle, still dimmed &middot; SFT alone: GROD 93/70/53 &middot; &pi;<sub>0.5</sub> 59/50/5</p>
+    </div>
+  </section>
+
+  <!-- rb · results chart: finding 1, GROD mastery -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">results &middot; finding 1</p>
+      <h2 class="slide-h">Two cycles turn GROD into a task specialist</h2>
+      <div class="rwrap">
+        <img src="./static/images/results_dark_b.svg" alt="The two GROD recipes highlighted: both climb to near-perfect success within two cycles">
+        <i class="rspot" style="left:22.47%;width:11.06%"></i><i class="rspot" style="left:55.04%;width:11.06%"></i><i class="rspot" style="left:87.61%;width:10.90%"></i>
+      </div>
+      <div class="rstats">
+        <span class="rstat">box packing&ensp;93 <i>&rarr;</i> <b>100</b></span>
+        <span class="rstat">cup insertion&ensp;70 <i>&rarr;</i> <b>98</b></span>
+        <span class="rstat">plate handover&ensp;53 <i>&rarr;</i> <b>96</b></span>
+      </div>
+      <p class="note center">Both GROD recipes beat the SFT baseline at every cycle &middot; dense chunk relabeling wins the hardest task (96 vs &asymp;84)</p>
+    </div>
+  </section>
+
+  <!-- rc · results chart: finding 2, generalizes to pi0.5 -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">results &middot; finding 2</p>
+      <h2 class="slide-h">The same pipeline lifts &pi;<sub>0.5</sub> too</h2>
+      <div class="rwrap">
+        <img src="./static/images/results_dark_c.svg" alt="The two pi-0.5 CLIFT recipes highlighted: success rises over two cycles but plateaus below GROD">
+        <i class="rspot" style="left:5.30%;width:11.06%"></i><i class="rspot" style="left:37.87%;width:11.06%"></i><i class="rspot" style="left:70.44%;width:11.06%"></i>
+      </div>
+      <div class="rstats">
+        <span class="rstat">box packing&ensp;59 <i>&rarr;</i> <b>76</b></span>
+        <span class="rstat">cup insertion&ensp;50 <i>&rarr;</i> <b>56</b></span>
+        <span class="rstat">plate handover&ensp;5 <i>&rarr;</i> <b>30</b></span>
+      </div>
+      <p class="note center">With the high-return recipe, two cycles net a gain on every task &mdash; zero model surgery &mdash; but progress is uneven, and the ceiling sits far below GROD&rsquo;s.</p>
+    </div>
+  </section>
+
+  <!-- rd · results chart: finding 3, base model sets the ceiling -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">results &middot; finding 3</p>
+      <h2 class="slide-h">The base model sets the ceiling &mdash; access doesn&rsquo;t</h2>
+      <div class="rwrap">
+        <img src="./static/images/results_dark_d.svg" alt="Invasive FiLM-conditioned pi-0.5 highlighted against API-only GROD: the gap does not close">
+        <i class="rspot" style="left:16.75%;width:5.34%"></i><i class="rspot" style="left:49.32%;width:5.34%"></i><i class="rspot" style="left:81.88%;width:5.34%"></i>
+        <i class="rspot" style="left:22.47%;width:5.34%"></i><i class="rspot" style="left:55.04%;width:5.34%"></i><i class="rspot" style="left:87.61%;width:5.34%"></i>
+      </div>
+      <p class="note center">&pi;<sub>0.5</sub> granted <strong>invasive</strong> FiLM conditioning (green) &mdash; an architectural change CLIFT forgoes &mdash; still trails <strong>API-only</strong> GROD (blue) on every task <span class="note-dim">(one invasive baseline evaluated)</span>.</p>
+    </div>
+  </section>
+
+  <!-- 15 · beyond GROD -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Emergent behaviors from closed-loop practice</h2>
+      <div class="duo">
+        <div>
+          <div class="clip clip-43"><video muted loop playsinline preload="metadata" poster="./static/images/emerge_box_poster.jpg" src="./static/videos/emerge_box.mp4"></video>
+          <img class="print-poster" src="./static/images/emerge_box_poster.jpg" alt=""></div>
+          <p class="cap">reorients the box in-hand to set up an easier grasp</p>
+        </div>
+        <div>
+          <div class="clip clip-43"><video muted loop playsinline preload="metadata" poster="./static/images/emerge_cup_poster.jpg" src="./static/videos/emerge_cup.mp4"></video>
+          <img class="print-poster" src="./static/images/emerge_cup_poster.jpg" alt=""></div>
+          <p class="cap">recovers from a failed first insertion — retries and succeeds</p>
+        </div>
+      </div>
+      <p class="note center">Behaviors absent from the teleoperated demonstrations.</p>
+    </div>
+  </section>
+
+  <!-- 20a · base model matters: same recipe, opposite outcomes -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Same CLIFT recipe, opposite outcomes</h2>
+      <div class="bm-wrap">
+        <p class="bm-cond">zero-shot: unseen objects &amp; configs &middot; only the base model differs</p>
+        <svg class="bmslope" viewBox="0 0 940 360" role="img" aria-label="Under the identical CLIFT recipe, GROD climbs from 84% to 98% zero-shot while pi-0.5 collapses from 70% to 52%.">
+          <line class="sl-guide" x1="150" y1="24" x2="150" y2="316"/>
+          <line class="sl-guide" x1="700" y1="24" x2="700" y2="316"/>
+          <text class="sl-axis" x="150" y="344" text-anchor="middle">before CLIFT</text>
+          <text class="sl-axis" x="700" y="344" text-anchor="middle">after CLIFT</text>
+          <g class="sl-grod">
+            <line class="sl-line" x1="150" y1="105" x2="700" y2="39"/>
+            <circle class="sl-dot0" cx="150" cy="105" r="5"/>
+            <text class="sl-label" x="136" y="105" text-anchor="end">GROD<tspan class="sl-base" dx="9">84%</tspan></text>
+            <g class="sl-cap">
+              <circle class="sl-halo" cx="700" cy="39" r="13"/>
+              <circle class="sl-dot" cx="700" cy="39" r="7"/>
+              <text class="sl-big" x="718" y="39">98%</text>
+              <text class="sl-verdict" x="720" y="84">climbs</text>
+            </g>
+          </g>
+          <g class="sl-pi">
+            <line class="sl-line" x1="150" y1="170" x2="700" y2="254"/>
+            <circle class="sl-dot0" cx="150" cy="170" r="5"/>
+            <text class="sl-label" x="136" y="170" text-anchor="end">&pi;<tspan class="sl-sub" dy="3">0.5</tspan><tspan class="sl-base" dx="9" dy="-3">70%</tspan></text>
+            <g class="sl-cap">
+              <circle class="sl-halo" cx="700" cy="254" r="13"/>
+              <circle class="sl-dot" cx="700" cy="254" r="7"/>
+              <text class="sl-big" x="718" y="254">52%</text>
+              <text class="sl-verdict" x="720" y="299">collapses</text>
+            </g>
+          </g>
+        </svg>
+        <p class="bm-coda">The base model <em class="grad-inline">sets the ceiling</em> &mdash; CLIFT can only climb toward it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 20b · why the collapse: pi-0.5 is blind to its own failures -->
+  <section class="slide">
+    <div class="stage">
+      <p class="kicker">why the collapse</p>
+      <h2 class="slide-h">&pi;<sub>0.5</sub> cannot see its own failures</h2>
+      <div class="bm-wrap">
+        <div class="failstrip">
+          <figure class="fs-frame">
+            <img src="./static/images/fig_pi05_plate_1.png" alt="pi-0.5 reaches to pick a plate">
+            <figcaption>1 &middot; reaches to pick a plate</figcaption>
+          </figure>
+          <span class="fs-arrow">&rarr;</span>
+          <figure class="fs-frame">
+            <img src="./static/images/fig_pi05_plate_2.png" alt="the pick fails">
+            <figcaption>2 &middot; pick fails</figcaption>
+          </figure>
+          <span class="fs-arrow">&rarr;</span>
+          <figure class="fs-frame fs-fail">
+            <img src="./static/images/fig_pi05_plate_3.png" alt="pi-0.5 proceeds to hand over with an empty gripper">
+            <span class="fs-tag">hand is empty &#10005;</span>
+            <figcaption>3 &middot; hands over anyway</figcaption>
+          </figure>
+        </div>
+        <p class="bm-after">
+          <span class="bm-after-cap">after identical sft &middot; bimanual plate handover</span>
+          <span class="bm-pair"><span class="bm-name">GROD</span><span class="bm-num">53%</span><span class="bm-vs">vs</span><span class="bm-name">&pi;<sub>0.5</sub></span><span class="bm-num bm-num-neg">5%</span></span>
+        </p>
+        <p class="bm-hyp"><span class="hypk">hypothesis</span> &mdash; over-reliance on proprioceptive cues; on-policy SFT may reinforce those correlations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 · closing — elements from the final PPTX slide -->
+  <section class="slide slide-title slide-full">
+    <div class="stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="center-col">
+        <h1 class="wordmark wordmark-sm grad">CLIFT</h1>
+        <p class="deck-line deck-line-sm">Task mastery for closed-weight robot foundation models &mdash;<br>
+          <strong>without ever opening the model box.</strong></p>
+        <p class="authors authors-sm">Yuxin Chen, Hari Srikanth, Nathan Jew, Menglin Wu, Pengcheng Wang, Junli Ren,<br>
+          Masayoshi Tomizuka, Peng Xu, Jinyu Xie, Ran &ldquo;Thomas&rdquo; Tian</p>
+        <div class="qr-row">
+          <figure class="qr"><img src="./static/images/qr_arxiv.png" alt="QR code linking to the arXiv paper"><figcaption>ArXiv</figcaption></figure>
+          <figure class="qr"><img src="./static/images/qr_website.png" alt="QR code linking to the project website"><figcaption>Website</figcaption></figure>
+          <figure class="qr"><img src="./static/images/qr_homepage.png" alt="QR code linking to the homepage"><figcaption>Homepage</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- what's next: RL pyramid -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">What&rsquo;s next: the RL pyramid for Physical AI</h2>
+      <p class="pyr-sub">Learning to <em class="pyr-v-reason">reason</em>, <em class="pyr-v-act">act</em>, and <em class="pyr-v-self">self-improve</em></p>
+      <div class="pyr-cols">
+        <div class="pyr-media">
+          <img src="./static/images/pyramid.png" alt="Three-layer glass pyramid: reasoning circuits at the base, closed-loop robot arms in the middle, a self-improving robot at the top, threaded by a glowing central beam">
+        </div>
+        <div class="pyr-right">
+          <span class="pyr-spine" aria-hidden="true"></span>
+          <span class="pyr-chevron" style="top: 152px" aria-hidden="true"></span>
+          <span class="pyr-chevron" style="top: 264px" aria-hidden="true"></span>
+          <div class="pyr-row pyr-row-top">
+            <p class="pyr-tag pyr-tag-top"><span class="pyr-dot"></span>On-device self-improve</p>
+            <p class="pyr-txt">on-device RL that keeps improving the model at deployment</p>
+          </div>
+          <div class="pyr-row pyr-row-mid">
+            <p class="pyr-tag pyr-tag-mid"><span class="pyr-dot"></span>Act &middot; closed loop</p>
+            <p class="pyr-txt">real-to-sim closed-loop RL for robots</p>
+            <div class="pyr-sim">
+              <video muted loop playsinline preload="metadata" poster="./static/images/sim_learn_poster.jpg" src="./static/videos/sim_learn.mp4"></video>
+              <p>Learning in sensor-physics joint sim</p>
+            </div>
+          </div>
+          <div class="pyr-row pyr-row-base">
+            <p class="pyr-tag pyr-tag-base"><span class="pyr-dot"></span>Reason</p>
+            <p class="pyr-txt">RL for task understanding, planning &amp; decision-making</p>
+          </div>
+          <div class="pyr-thread">
+            <p class="pyr-thread-k">Agentic research</p>
+            <p class="pyr-thread-t">agents propose, run, and analyze the experiments at every layer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- acknowledgments -->
+  <section class="slide">
+    <div class="stage">
+      <h2 class="slide-h">Acknowledgments</h2>
+      <div class="ack-wrap">
+        <p class="ack-lead">
+          <img src="./static/images/logo_gdm.svg" alt="Google DeepMind">
+          This work is supported by <strong>Google DeepMind</strong> funding.
+        </p>
+        <div class="ack-row">
+          <div class="ack-tile">
+            <p class="ack-num">3</p>
+            <p class="ack-label">published papers</p>
+            <p class="ack-sub">more under development</p>
+          </div>
+          <div class="ack-tile">
+            <p class="ack-num">7</p>
+            <p class="ack-label">undergraduate students</p>
+            <p class="ack-sub">working on the robot</p>
+          </div>
+          <div class="ack-tile">
+            <p class="ack-num">1</p>
+            <p class="ack-label">award</p>
+            <p class="ack-sub">ICRA WBCD challenge<br>1st in the US &middot; 3rd globally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="hud" aria-hidden="true">
+  <button class="hud-btn" id="prev" aria-label="Previous slide">&#8592;</button>
+  <span class="hud-count" id="count">1 / 44</span>
+  <button class="hud-btn" id="next" aria-label="Next slide">&#8594;</button>
+</div>
+<div class="deck-progress" aria-hidden="true"><i id="deck-bar"></i></div>
+
+</body>
+</html>
