@@ -945,10 +945,7 @@ a = &pi;(o, &#8467;)   <span class="c-dim">classifier-free guidance, &beta; = 0.
       <p class="kicker">results</p>
       <h2 class="slide-h">One chart, the whole story &mdash; starting from SFT</h2>
       <div class="rwrap">
-        <img src="./static/images/results_dark.svg" alt="Success rate over 100 trials for five adaptation recipes — SFT baseline plus two flywheel cycles on three tasks — cycle bars dimmed, SFT baselines visible">
-        <i class="rdim" style="left:7.12%;width:3.25%"></i><i class="rdim" style="left:12.84%;width:3.25%"></i><i class="rdim" style="left:18.57%;width:3.25%"></i><i class="rdim" style="left:24.29%;width:3.25%"></i><i class="rdim" style="left:30.01%;width:3.25%"></i>
-        <i class="rdim" style="left:39.69%;width:3.25%"></i><i class="rdim" style="left:45.41%;width:3.25%"></i><i class="rdim" style="left:51.14%;width:3.25%"></i><i class="rdim" style="left:56.86%;width:3.25%"></i><i class="rdim" style="left:62.58%;width:3.25%"></i>
-        <i class="rdim" style="left:72.26%;width:3.25%"></i><i class="rdim" style="left:77.98%;width:3.25%"></i><i class="rdim" style="left:83.70%;width:3.25%"></i><i class="rdim" style="left:89.43%;width:3.25%"></i><i class="rdim" style="left:95.15%;width:3.25%"></i>
+        <img src="./static/images/results_dark_a.svg" alt="Success rate over 100 trials for five adaptation recipes — SFT baseline plus two flywheel cycles on three tasks — cycle bars dimmed, SFT baselines visible">
       </div>
       <p class="note center">100 trials per bar &middot; hatching = flywheel cycle, still dimmed &middot; SFT alone: GROD 93/70/53 &middot; &pi;<sub>0.5</sub> 59/50/5</p>
     </div>
@@ -960,8 +957,7 @@ a = &pi;(o, &#8467;)   <span class="c-dim">classifier-free guidance, &beta; = 0.
       <p class="kicker">results &middot; finding 1</p>
       <h2 class="slide-h">Two cycles turn GROD into a task specialist</h2>
       <div class="rwrap">
-        <img src="./static/images/results_dark.svg" alt="The two GROD recipes highlighted: both climb to near-perfect success within two cycles">
-        <i class="rdim" style="left:5.30%;width:16.69%"></i><i class="rdim" style="left:37.87%;width:16.69%"></i><i class="rdim" style="left:70.44%;width:16.69%"></i>
+        <img src="./static/images/results_dark_b.svg" alt="The two GROD recipes highlighted: both climb to near-perfect success within two cycles">
         <i class="rspot" style="left:22.47%;width:11.06%"></i><i class="rspot" style="left:55.04%;width:11.06%"></i><i class="rspot" style="left:87.61%;width:10.90%"></i>
       </div>
       <div class="rstats">
@@ -979,9 +975,7 @@ a = &pi;(o, &#8467;)   <span class="c-dim">classifier-free guidance, &beta; = 0.
       <p class="kicker">results &middot; finding 2</p>
       <h2 class="slide-h">The same pipeline lifts &pi;<sub>0.5</sub> too</h2>
       <div class="rwrap">
-        <img src="./static/images/results_dark.svg" alt="The two pi-0.5 CLIFT recipes highlighted: success rises every cycle but plateaus below GROD">
-        <i class="rdim" style="left:16.75%;width:5.34%"></i><i class="rdim" style="left:49.32%;width:5.34%"></i><i class="rdim" style="left:81.88%;width:5.34%"></i>
-        <i class="rdim" style="left:22.47%;width:11.06%"></i><i class="rdim" style="left:55.04%;width:11.06%"></i><i class="rdim" style="left:87.61%;width:10.90%"></i>
+        <img src="./static/images/results_dark_c.svg" alt="The two pi-0.5 CLIFT recipes highlighted: success rises over two cycles but plateaus below GROD">
         <i class="rspot" style="left:5.30%;width:11.06%"></i><i class="rspot" style="left:37.87%;width:11.06%"></i><i class="rspot" style="left:70.44%;width:11.06%"></i>
       </div>
       <div class="rstats">
@@ -999,9 +993,7 @@ a = &pi;(o, &#8467;)   <span class="c-dim">classifier-free guidance, &beta; = 0.
       <p class="kicker">results &middot; finding 3</p>
       <h2 class="slide-h">The base model sets the ceiling &mdash; access doesn&rsquo;t</h2>
       <div class="rwrap">
-        <img src="./static/images/results_dark.svg" alt="Invasive FiLM-conditioned pi-0.5 highlighted against API-only GROD: the gap does not close">
-        <i class="rdim" style="left:5.30%;width:11.06%"></i><i class="rdim" style="left:37.87%;width:11.06%"></i><i class="rdim" style="left:70.44%;width:11.06%"></i>
-        <i class="rdim" style="left:28.19%;width:5.34%"></i><i class="rdim" style="left:60.76%;width:5.34%"></i><i class="rdim" style="left:93.33%;width:5.18%"></i>
+        <img src="./static/images/results_dark_d.svg" alt="Invasive FiLM-conditioned pi-0.5 highlighted against API-only GROD: the gap does not close">
         <i class="rspot" style="left:16.75%;width:5.34%"></i><i class="rspot" style="left:49.32%;width:5.34%"></i><i class="rspot" style="left:81.88%;width:5.34%"></i>
         <i class="rspot" style="left:22.47%;width:5.34%"></i><i class="rspot" style="left:55.04%;width:5.34%"></i><i class="rspot" style="left:87.61%;width:5.34%"></i>
       </div>
